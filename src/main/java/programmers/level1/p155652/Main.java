@@ -1,45 +1,7 @@
 package programmers.level1.p155652;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Main {
 }
-
-//class Solution {
-//    public String solution(String s, String skip, int index) {
-//        String result = "";
-//        String[] alphabetArr = new String[]
-//                {"a", "b", "c", "d", "e", "f", "g", "h"
-//                        , "i", "j", "k", "l", "m", "n", "o", "p", "q"
-//                        , "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-//        List<String> list = new ArrayList<>(Arrays.asList(alphabetArr));
-//        List<Integer> eraseList = new ArrayList<>();
-//
-//        for (int i = 0; i < skip.length(); i++) {
-//            String alphabet = skip.charAt(i) + "";
-//            list.remove(alphabet);
-//            eraseList.add(skip.charAt(i) - 'a');
-//        }
-//
-//        for (int i = 0; i < s.length(); i++) {
-//            int order = (s.charAt(i) - 'a'); // 알파벳 순서
-//            int count = 0;
-//
-//            for (int j = 0; j < eraseList.size(); j++) {
-//                if (eraseList.get(j) >= order && eraseList.get(j) <= ((order + index) % 26)
-//                        || order > (order + index) % 26 && eraseList.get(j) <= ((order + index) % 26)) {
-//                    count++;
-//                }
-//            }
-//
-//            result += alphabetArr[(order + count + index) % 26];
-//        }
-//
-//        return result;
-//    }
-//}
 
 class Solution {
     public String solution(String s, String skip, int index) {
