@@ -10,12 +10,12 @@ class MainTest {
     @Test
     @DisplayName("[2,1,1,2,3,1,2,3,1] -> 2")
     void t1() {
-        assertThat(new Solution().solution(new int[] {2,1,1,2,3,1,2,3,1})).isEqualTo(2);
+        assertThat(new Solution().solution(new int[] {2, 1, 1, 2, 3, 1, 2, 3, 1})).isEqualTo(2);
     }
 
     @Test
     @DisplayName("[1,3,2,1,2,1,3,1,2] -> 0")
     void t2() {
-        assertThat(new Solution().solution(new int[] {1,3,2,1,2,1,3,1,2})).isEqualTo(0);
+        assertThat(new Solution().solution(new int[] {1, 3, 2, 1, 2, 1, 3, 1, 2})).isEqualTo(0);
     }
 }
