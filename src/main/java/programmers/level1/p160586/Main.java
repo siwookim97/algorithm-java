@@ -1,37 +1,36 @@
-package p160586;
+package programmers.level1.p160586;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Main {
 }
-
 
 class Solution {
     public int[] solution(String[] keymap, String[] targets) {
         HashMap<Character, Integer> hm = new HashMap<>();
         int[] ret = new int[targets.length];
 
-        for(String key : keymap) {
-            for(int i=0 ; i<key.length() ; i++) {
+        for (String key : keymap) {
+            for (int i = 0; i < key.length(); i++) {
                 char c = key.charAt(i);
-                if(!hm.containsKey(c) || i<hm.get(c)) {
-                    hm.put(c, i+1);
+                if (!hm.containsKey(c) || i < hm.get(c)) {
+                    hm.put(c, i + 1);
                 }
             }
         }
 
-        for(int i=0 ; i<targets.length ; i++) {
+        for (int i = 0; i < targets.length; i++) {
             int cnt = 0;
-            for(int j=0 ; j<targets[i].length() ; j++) {
+            for (int j = 0; j < targets[i].length(); j++) {
                 char c = targets[i].charAt(j);
-                if(!hm.containsKey(c)) {
+                if (!hm.containsKey(c)) {
                     cnt = 0;
                     break;
                 } else {
                     cnt += hm.get(c);
                 }
             }
-            ret[i] = cnt==0?-1:cnt;
+            ret[i] = cnt == 0 ? -1 : cnt;
         }
         return ret;
     }
